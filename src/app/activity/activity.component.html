@@ -1,0 +1,20 @@
+
+<div class="card" *ngIf="!activity.attachments || !activity.attachments.length"
+     [ngClass]="{botMessage: activity.from.id === 'chime-basic-bot-poc',
+     'userMessage': activity.from.id !== 'chime-basic-bot-poc'}" >
+  <div class="card-body">
+    <p class="card-text">{{activity.text}}</p>
+  </div>
+</div>
+
+<div class="card" *ngIf="activity.attachments && activity.attachments.length"
+     [ngClass]="{botMessage: activity.from.id === 'chime-basic-bot-poc',
+     'userMessage': activity.from.id !== 'chime-basic-bot-poc'}">
+  <div class="card-body">
+    <h5 class="card-title">{{activity.text}}</h5>
+    <button *ngFor="let action of activity.attachments[0].content.actions"
+            (click)="doAction(action)"
+            type="button"
+            class="btn btn-primary btn-lg btn-block">{{action.title}}</button>
+  </div>
+</div>

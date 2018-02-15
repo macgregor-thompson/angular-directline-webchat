@@ -1,0 +1,43 @@
+
+<div class="conversation-container">
+  <div class="card">
+    <div class="card-header">
+      DirectLine Custom Web Chat
+    </div>
+    <div  class="card-body" id="chat-content">
+      <div class="alert alert-info text-center">
+        <h1>Welcome to Chime Chat</h1>
+      </div>
+
+      <!--ul  class="list-group">
+        <li *ngFor="let activity of activities"
+            [ngClass]="{'list-group-item list-group-item-primary': activity.from.id === 'chime-basic-bot-poc',
+            'list-group-item list-group-item-success': activity.from.id !== 'chime-basic-bot-poc'}">
+          <app-activity [activity]="activity"></app-activity>
+        </li>
+      </ul>-->
+
+     <div *ngFor="let activity of activities" class="text-message">
+        <app-activity [activity]="activity"></app-activity>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="input-group">
+        <input [(ngModel)]="newMessage" (keyup.enter)="postMessage()" type="text" class="form-control"
+               placeholder="" aria-label="" aria-describedby="">
+        <div class="input-group-append">
+
+          <button class="btn btn-primary" (click)="postMessage()" type="button">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+
+  </div>
+
+</div>
+
+
+
+
