@@ -19,9 +19,7 @@ export class WebChatComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dl.monitorConnection().subscribe(connectionStatus => {
-      //console.log(`DirectLine connection status`, connectionStatus);
-    });
+    this.dl.monitorConnection().subscribe(connectionStatus => {});
 
     this.dl.listenForMessages().subscribe(activity => {
       this.activities.push(activity);
