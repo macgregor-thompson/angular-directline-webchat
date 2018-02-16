@@ -51,7 +51,7 @@ export class WebChatComponent implements OnInit {
     switch (status) {
       case ConnectionStatus.Uninitialized: // the status when the DirectLine object is first created/constructed
       case ConnectionStatus.Connecting:       // currently trying to connect to the conversation
-      case ConnectionStatus.Online:           // successfully connected to the converstaion. Connection is healthy so far as we know.
+      case ConnectionStatus.Online:           // successfully connected to the conversation. Connection is healthy so far as we know.
       case ConnectionStatus.ExpiredToken:     // last operation errored out with an expired token. Your app should supply a new one.
       case ConnectionStatus.FailedToConnect:  // the initial attempt to connect to the conversation failed. No recovery possible.
       case ConnectionStatus.Ended:            // the bot ended the conversation
