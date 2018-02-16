@@ -1,25 +1,24 @@
-
 <div class="conversation-container">
   <div class="card">
     <div class="card-header">
       <img src="../../assets/img/chime-red.png">
     </div>
-    <div  class="card-body" id="chat-content">
+    <div class="card-body" id="chat-content">
       <div class="alert alert-info text-center">
-        <h1>Welcome to Chime Chat</h1>
+        <h1>Welcome to Instant Chime</h1>
       </div>
 
-      <!--ul  class="list-group">
-        <li *ngFor="let activity of activities"
-            [ngClass]="{'list-group-item list-group-item-primary': activity.from.id === 'chime-basic-bot-poc',
-            'list-group-item list-group-item-success': activity.from.id !== 'chime-basic-bot-poc'}">
+      <ul class="list-group">
+        <li *ngFor="let activity of activities" class="list-group-item"
+            [ngClass]="{'list-group-item-primary': activity.from.id === 'chime-basic-bot-poc',
+            'list-group-item-success': activity.from.id !== 'chime-basic-bot-poc'}">
           <app-activity [activity]="activity"></app-activity>
         </li>
-      </ul>-->
+      </ul>
 
-     <div *ngFor="let activity of activities" class="text-message">
+      <!--<div *ngFor="let activity of activities" class="text-message">
         <app-activity [activity]="activity"></app-activity>
-      </div>
+      </div>-->
     </div>
     <div class="card-footer">
       <div class="input-group">

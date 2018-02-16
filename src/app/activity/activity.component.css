@@ -1,12 +1,21 @@
 
-.card.userMessage {
-  /*color: #004085;*/
+.text-message {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timestamp {
+  white-space: nowrap;
+}
+
+/*.card.userMessage {
+  !*color: #004085;*!
   background-color: #cce5ff;
   border-color: #b8daff;
 }
 
 .card.botMessage {
-  /*color: #155724;*/
+  !*color: #155724;*!
   background-color: #d4edda;
   border-color: #c3e6cb;
-}
+}*/

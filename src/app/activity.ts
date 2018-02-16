@@ -3,7 +3,7 @@ export class Activity {
   channelId: string;
   conversation: object;
   entities: object[];
-  from: object;
+  from: From;
   id: string;
   membersAdded: object[];
   membersRemoved: object[];
@@ -14,7 +14,7 @@ export class Activity {
   timestamp: string;
   type: string;
 
-  constructor(text: string, from: object, type: string) {
+  constructor(text: string, from: From, type: string) {
     this.text = text;
     this.from = from;
     this.type = type;
@@ -23,4 +23,7 @@ export class Activity {
 
 }
 
-
+export class From {
+  id: string;
+  name: string;
+}
