@@ -7,10 +7,13 @@ import {ActivityType} from './activity-type';
 export class DirectlineService {
 
   private directLine: DirectLine;
+  private basicBotSecret = 'fhtsGyBw90c.cwA.PgY.GTR472aCtpnPlQzXjA4ZfWlolsZN42cH5053fcExOeM';
+  private formBotSecret = 'FZ58vHdJR_U.cwA.MbA.-DGXIEMhsW-4ao8HRZqQXpvH2JGQbyt0ArByd6JLnLc';
+
 
   constructor() {
     this.directLine = new DirectLine({
-      secret: 'fhtsGyBw90c.cwA.PgY.GTR472aCtpnPlQzXjA4ZfWlolsZN42cH5053fcExOeM'
+      secret: this.basicBotSecret
     });
   }
 
