@@ -3,11 +3,10 @@
     <div class="card-header">
       <img src="../../assets/img/chime-red.png">
     </div>
-    <div class="card-body" id="chat-content">
+    <div class="card-body" id="chat-content" #chat [scrollTop]="chat.scrollHeight">
       <div class="alert alert-info text-center">
         <h1>Welcome to Instant Chime</h1>
       </div>
-
       <ul class="list-group">
         <li *ngFor="let activity of activities" class="list-group-item"
             [ngClass]="{'list-group-item-primary': activity.from.id === 'chime-basic-bot-poc',
@@ -15,7 +14,6 @@
           <app-activity [activity]="activity"></app-activity>
         </li>
       </ul>
-
       <!--<div *ngFor="let activity of activities" class="text-message">
         <app-activity [activity]="activity"></app-activity>
       </div>-->
