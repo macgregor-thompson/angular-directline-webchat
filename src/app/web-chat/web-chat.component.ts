@@ -14,6 +14,7 @@ export class WebChatComponent implements OnInit {
   activities: Activity[] = [];
   status = ConnectionStatus.Uninitialized;
   newMessage = '';
+  spinner = false;
 
   constructor(private dl: DirectlineService) {}
 
@@ -22,6 +23,7 @@ export class WebChatComponent implements OnInit {
 
     this.dl.listenForMessages().subscribe(activity => {
       this.activities.push(activity);
+      this.spinner = false;
       console.log('received message from bot:', activity);
     });
 
@@ -51,6 +53,7 @@ export class WebChatComponent implements OnInit {
         console.log(`Connection status: ${status}, Uninitialized `);
         break;
       case ConnectionStatus.Connecting:       // currently trying to connect to the conversation
+        this.spinner = true;
         console.log(`Connection status: ${status}, Connecting `);
         break;
       case ConnectionStatus.Online:           // successfully connected to the conversation. Connection is healthy so far as we know.

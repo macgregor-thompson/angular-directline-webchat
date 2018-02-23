@@ -4,6 +4,7 @@
       <img src="../../assets/img/chime-red.png">
     </div>
     <div class="card-body" id="chat-content" #chat [scrollTop]="chat.scrollHeight">
+      <ngx-loading [show]="spinner"></ngx-loading>
       <div class="alert alert-info text-center">
         <h1>Welcome to Instant Chime</h1>
       </div>
@@ -29,10 +30,6 @@
       </div>
     </div>
   </div>
-  <div>
-
-  </div>
-
 </div>
 
 
