@@ -21,9 +21,18 @@ Prerequisites:
  __directLineSecret.json__ file that can be located in 
  _angular-directline-webchat/src/app/directLineSecret.json_.
  
+ ```json
+ {
+   "directLineSecret": "YOUR_DIRECT_LINE_SECRET"
+ }
+
+ ```
+ 
  ### 3. Test it out
  Test that you can connect to your bot by opening a a command prompt or terminal at the project's location and
   running `ng serve -o`. _(the -o flag opens the browser to localhost:4200 automatically)_
+ 
+ If you are able to connect, then you are all set and you can start customizing the project however you see fit!
   
 --------------------------------------
 
