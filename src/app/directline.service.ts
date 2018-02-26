@@ -2,15 +2,15 @@ import { Injectable } from '@angular/core';
 import { DirectLine } from 'botframework-directlinejs';
 import { Observable } from 'rxjs/Observable';
 import { ActivityType } from './activity-type';
+import * as secret from '../assets/directLineSecret.json';
 
 @Injectable()
 export class DirectLineService {
   private directLine: DirectLine;
-  private directLineSecret = 'YOUR_DIRECT_LINE_SECRET';
 
   constructor() {
     this.directLine = new DirectLine({
-      secret: this.directLineSecret
+      secret: secret['directLineSecret']
     });
   }
 
