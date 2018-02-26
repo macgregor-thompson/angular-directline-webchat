@@ -1,6 +1,6 @@
 {
-  "name": "directline-web-chat",
-  "version": "0.0.0",
+  "name": "angular-directline-webchat",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
