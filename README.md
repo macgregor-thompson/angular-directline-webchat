@@ -10,17 +10,18 @@ Prerequisites:
  
  ## Getting Started:
  
- ###1. Clone or fork this repo.
+ ### 1. Clone or fork this repo.
  You need to either clone or fork this repo to get started.
  ```shell
  $ git clone https://github.com/mhthompson86/angular-directline-webchat.git
  ```
- ###2. Add your Direct Line Secret Key
+ ### 2. Add your Direct Line Secret Key
  Before anything will work, you must configure the project to use your bot's Direct Line secret key.  
  To do this, copy the secret from your bot's Direct Line channel on the Azure portal and paste it into the 
  __directLineSecret.json__ file that can be located in 
  _angular-directline-webchat/src/app/directLineSecret.json_.
- ###3. Test it out
+ 
+ ### 3. Test it out
  Test that you can connect to your bot by opening a a command prompt or terminal at the project's location and
   running `ng serve -o`. _(the -o flag opens the browser to localhost:4200 automatically)_
   
