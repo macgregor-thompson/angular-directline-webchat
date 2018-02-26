@@ -6,7 +6,7 @@ import { LoadingModule, ANIMATION_TYPES } from 'ngx-loading';
 
 import { AppComponent } from './app.component';
 import { WebChatComponent } from './web-chat/web-chat.component';
-import { DirectlineService } from './directline.service';
+import { DirectLineService } from './directline.service';
 import { ActivityComponent } from './activity/activity.component';
 
 
@@ -32,7 +32,7 @@ import { ActivityComponent } from './activity/activity.component';
       tertiaryColour: '#007bff'
     })
   ],
-  providers: [ DirectlineService ],
+  providers: [ DirectLineService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

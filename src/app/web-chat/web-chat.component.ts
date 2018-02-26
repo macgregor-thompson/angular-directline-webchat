@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DirectlineService } from '../directline.service';
+import { DirectLineService } from '../directline.service';
 import { Activity } from '../activity';
 import { ActivityType } from '../activity-type';
 import { ConnectionStatus } from 'botframework-directlinejs';
@@ -16,7 +16,7 @@ export class WebChatComponent implements OnInit {
   newMessage = '';
   spinner = false;
 
-  constructor(private dl: DirectlineService) {}
+  constructor(private dl: DirectLineService) {}
 
   ngOnInit() {
     this.dl.monitorConnection().subscribe(connectionStatus => {});

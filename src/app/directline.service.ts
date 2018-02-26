@@ -1,19 +1,16 @@
-import {Injectable} from '@angular/core';
-import {DirectLine, ConnectionStatus} from 'botframework-directlinejs';
-import {Observable} from 'rxjs/Observable';
-import {ActivityType} from './activity-type';
+import { Injectable } from '@angular/core';
+import { DirectLine } from 'botframework-directlinejs';
+import { Observable } from 'rxjs/Observable';
+import { ActivityType } from './activity-type';
 
 @Injectable()
-export class DirectlineService {
-
+export class DirectLineService {
   private directLine: DirectLine;
-  private basicBotSecret = 'fhtsGyBw90c.cwA.PgY.GTR472aCtpnPlQzXjA4ZfWlolsZN42cH5053fcExOeM';
-  private formBotSecret = 'FZ58vHdJR_U.cwA.MbA.-DGXIEMhsW-4ao8HRZqQXpvH2JGQbyt0ArByd6JLnLc';
-
+  private directLineSecret = 'YOUR_DIRECT_LINE_SECRET';
 
   constructor() {
     this.directLine = new DirectLine({
-      secret: this.basicBotSecret
+      secret: this.directLineSecret
     });
   }
 

@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { DirectlineService } from './directline.service';
+import { DirectLineService } from './directline.service';
 
-describe('DirectlineService', () => {
+describe('DirectLineService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DirectlineService]
+      providers: [DirectLineService]
     });
   });
 
-  it('should be created', inject([DirectlineService], (service: DirectlineService) => {
+  it('should be created', inject([DirectLineService], (service: DirectLineService) => {
     expect(service).toBeTruthy();
   }));
 });
