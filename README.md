@@ -28,7 +28,32 @@ Prerequisites:
 
  ```
  
- ### 3. Test it out
+ ### 3. Customize the Settings
+ To make it easier for you, we created a settings.ts file that will contain some information that will get used
+ in various places in the code. Just swap out the values for the ones you want.
+ The __settings.ts__ file can be located in 
+ _angular-directline-webchat/src/app/settings.ts_.
+ 
+ ```javascript
+export const Settings = {
+  bot: {
+    // This must match your bot's ID from Azure...(activity.from.id)
+    // Bot page on Azure portal > Application Settings > BotId in the App Settings table
+    id: 'chime-basic-bot-poc',
+    
+    // this is what will be shown in the chat dialog
+    name: 'Chime bot'
+  },
+  
+  // this is what is statically shown to the user before anything arrives from the bot
+  welcomeMessage: 'Welcome to Instant Chime',
+  
+  // the image used in the top left of the chat window
+  logo: '../../assets/img/chime-red.png'
+};
+ ``` 
+ 
+ ### 4. Test it out
  Test that you can connect to your bot by opening a a command prompt or terminal at the project's location and
   running `ng serve -o`. _(the -o flag opens the browser to localhost:4200 automatically)_
  
