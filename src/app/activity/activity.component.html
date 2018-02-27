@@ -1,32 +1,23 @@
-<!--<div class="card" *ngIf="!activity.attachments || !activity.attachments.length"
-     [ngClass]="{botMessage: activity.from.id === 'chime-basic-bot-poc',
-     'userMessage': activity.from.id !== 'chime-basic-bot-poc'}" >
-  <div class="card-body">
-    <p class="card-text">{{activity.text}}</p>
-  </div>
-</div>-->
-
-
 <div *ngIf="!activity.attachments || !activity.attachments.length" class="text-message">
   <div>
-    <span *ngIf="activity.from.id !== 'chime-basic-bot-poc'" class="text-muted small">You:</span>
-    <span *ngIf="activity.from.id === 'chime-basic-bot-poc'" class="text-muted small">Chime Bot:</span>
-    {{activity.text}}
+    <span *ngIf="activity.from.id !== settings.bot.id" class="text-muted small">You:</span>
+    <span *ngIf="activity.from.id === settings.bot.id" class="text-muted small">{{ settings.bot.name }}:</span>
+    {{ activity.text }}
   </div>
   <div class="text-muted small timestamp">
-    {{activity.timestamp | date: 'mediumTime'}}
+    {{ activity.timestamp | date: 'mediumTime' }}
   </div>
 </div>
 
 <div class="card" *ngIf="activity.attachments && activity.attachments.length"
-     [ngClass]="{botMessage: activity.from.id === 'chime-basic-bot-poc',
-     'userMessage': activity.from.id !== 'chime-basic-bot-poc'}">
+     [ngClass]="{botMessage: activity.from.id === settings.bot.id,
+     'userMessage': activity.from.id !== settings.bot.id}">
   <div class="card-body">
-    <h5 class="card-title">{{activity.text}}</h5>
+    <h5 class="card-title">{{ activity.text }}</h5>
     <button *ngFor="let action of activity.attachments[0].content.actions"
             (click)="doAction(action)"
             type="button"
-            class="btn btn-primary btn-lg btn-block">{{action.title}}
+            class="btn btn-primary btn-lg btn-block">{{ action.title }}
     </button>
   </div>
 </div>

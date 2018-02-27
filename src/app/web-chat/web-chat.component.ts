@@ -3,6 +3,7 @@ import { DirectLineService } from '../directline.service';
 import { Activity } from '../activity';
 import { ActivityType } from '../activity-type';
 import { ConnectionStatus } from 'botframework-directlinejs';
+import { Settings } from '../settings';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { ConnectionStatus } from 'botframework-directlinejs';
   styleUrls: [ './web-chat.component.css' ]
 })
 export class WebChatComponent implements OnInit {
+  settings = Settings;
   activities: Activity[] = [];
   status = ConnectionStatus.Uninitialized;
   newMessage = '';
